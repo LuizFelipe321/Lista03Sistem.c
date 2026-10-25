@@ -1,31 +1,33 @@
+
 #include <stdio.h>
 
-/*Escreva um programa que leia a altura de 5 homens e 5 mulheres, e imprima a média de altura
-masculina, feminina e geral.*/
-
-    int main(){
-
-    int homem, mulher, soma1=0, soma2=0;
+int main() {
+    float homem, mulher;
+    float soma1 = 0, soma2 = 0;
     float mediaGeral, mediaHomem, mediaMulher;
 
-    for(int i=1; i <= 5; i++){
-        printf("Altura do homem: %d Quantidade: %d", homem, i);
+    for (int i = 1; i <= 5; i++) {
+        printf("Digite a altura do homem %d: ", i);
+        scanf("%f", &homem);
 
         soma1 += homem;
-        mediaHomem = soma1 / 5;
     }
 
-    for(int j=1; j <= 5; j++){
-        printf("Altura da mulher: %d Quantidade: %d", mulher, j);
+    for (int j = 1; j <= 5; j++) {
+        printf("Digite a altura da mulher %d: ", j);
+        scanf("%f", &mulher);
 
         soma2 += mulher;
-        mediaMulher = soma2 / 5;
     }
 
-    mediaGeral = (soma1 + soma2) / 10;
+    mediaHomem = soma1 / 5.0;
+    mediaMulher = soma2 / 5.0;
+    mediaGeral = (soma1 + soma2) / 10.0;
 
-    printf("Media de homens: %f\n Media de mulheres: %f\n Media Geral: %f\n", mediaHomem, mediaMulher, mediaGeral);
+    printf("\nMedia dos homens: %.2f\n", mediaHomem);
+    printf("Media das mulheres: %.2f\n", mediaMulher);
+    printf("Media geral: %.2f\n", mediaGeral);
 
     return 0;
+}
 
-    }
